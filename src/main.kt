@@ -23,9 +23,9 @@ fun main() {
     println("Bonificação ${gerente.bonificacao()}")
 
     val diretor = Diretor(
-        nome = "Ana",
+        nome = "Marcos",
         cpf = "111.222.333-45",
-        salario = 200.00,
+        salario = 500.00,
         senha = 123,
         plr = 20.0
     )
@@ -39,6 +39,13 @@ fun main() {
     } else {
         println("Erro na autenticação")
     }
+
+    val calculadora = CalculadoraBonificacao()
+    calculadora.registra(funcionario)
+    calculadora.registra(gerente)
+    calculadora.registra(diretor)
+
+    println("Total de bonificação: ${calculadora.total}")
 
 }
 
