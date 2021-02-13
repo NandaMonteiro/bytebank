@@ -1,64 +1,27 @@
 fun main() {
     println("Bem Vindo ao Bytebank")
 
-    val funcionario = Funcionario(
-        nome = "Fernanda",
-        cpf = "111.222.333-45",
-        salario = 100.00,
+    val contaCorrente = ContaCorrente(
+        titular = "Nanda",
+        numeroConta = 1223
     )
 
-    println("Nome ${funcionario.nome}")
-    println("Salário ${funcionario.salario}")
-    println("Bonificação ${funcionario.bonificacao()}")
-
-    val gerente = Gerente(
-        nome = "Ana",
-        cpf = "111.222.333-45",
-        salario = 200.00,
-        senha = 123
+    val contaPoupanca = ContaPoupanca(
+        titular = "Marcos",
+        numeroConta =  1222
     )
 
-    println("Nome ${gerente.nome}")
-    println("Salário ${gerente.salario}")
-    println("Bonificação ${gerente.bonificacao()}")
+    contaCorrente.deposita(1000.0)
+    contaPoupanca.deposita(1000.0)
 
-    val diretor = Diretor(
-        nome = "Marcos",
-        cpf = "111.222.333-45",
-        salario = 500.00,
-        senha = 123,
-        plr = 20.0
-    )
+    contaCorrente.saca(100.0)
+    contaPoupanca.saca(100.0)
 
-    println("Nome ${diretor.nome}")
-    println("Salário ${diretor.salario}")
-    println("Bonificação ${diretor.bonificacao()}")
-
-    val analista = Analista(
-        nome = "Beto",
-        cpf = "111.222.333-45",
-        salario = 400.00
-    )
-
-    println("Nome ${analista.nome}")
-    println("Salário ${analista.salario}")
-    println("Bonificação ${analista.bonificacao()}")
-
-    if (gerente.autentica(123)) {
-        println("Autentecação confirmada")
-    } else {
-        println("Erro na autenticação")
-    }
-
-    val calculadora = CalculadoraBonificacao()
-    calculadora.registra(funcionario)
-    calculadora.registra(gerente)
-    calculadora.registra(diretor)
-    calculadora.registra(analista)
-
-    println("Total de bonificação: ${calculadora.total}")
-
+    println("Conta corrente saldo -> ${contaCorrente.saldo}")
+    println("Conta poupanca saldo -> ${contaPoupanca.saldo}")
 }
+
+
 
 
 
