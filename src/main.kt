@@ -19,6 +19,15 @@ fun main() {
 
     println("Conta corrente saldo -> ${contaCorrente.saldo}")
     println("Conta poupanca saldo -> ${contaPoupanca.saldo}")
+
+    contaCorrente.transfere(100.0, contaPoupanca)
+    println("Conta corrente saldo -> ${contaCorrente.saldo}")
+    println("Conta poupanca saldo -> ${contaPoupanca.saldo}")
+
+    contaPoupanca.transfere(100.0, contaCorrente)
+    println("Conta corrente saldo -> ${contaCorrente.saldo}")
+    println("Conta poupanca saldo -> ${contaPoupanca.saldo}")
+
 }
 
 
