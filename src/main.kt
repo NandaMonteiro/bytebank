@@ -34,6 +34,16 @@ fun main() {
     println("Salário ${diretor.salario}")
     println("Bonificação ${diretor.bonificacao()}")
 
+    val analista = Analista(
+        nome = "Beto",
+        cpf = "111.222.333-45",
+        salario = 400.00
+    )
+
+    println("Nome ${analista.nome}")
+    println("Salário ${analista.salario}")
+    println("Bonificação ${analista.bonificacao()}")
+
     if (gerente.autentica(123)) {
         println("Autentecação confirmada")
     } else {
@@ -44,6 +54,7 @@ fun main() {
     calculadora.registra(funcionario)
     calculadora.registra(gerente)
     calculadora.registra(diretor)
+    calculadora.registra(analista)
 
     println("Total de bonificação: ${calculadora.total}")
 
