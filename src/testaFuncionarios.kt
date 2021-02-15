@@ -1,14 +1,4 @@
 fun testaFuncionarios() {
-    val funcionario = Funcionario(
-        nome = "Fernanda",
-        cpf = "111.222.333-45",
-        salario = 100.00,
-    )
-
-    println("Nome ${funcionario.nome}")
-    println("Salário ${funcionario.salario}")
-    println("Bonificação ${funcionario.bonificacao()}")
-
     val gerente = Gerente(
         nome = "Ana",
         cpf = "111.222.333-45",
@@ -49,7 +39,6 @@ fun testaFuncionarios() {
     }
 
     val calculadora = CalculadoraBonificacao()
-    calculadora.registra(funcionario)
     calculadora.registra(gerente)
     calculadora.registra(diretor)
     calculadora.registra(analista)

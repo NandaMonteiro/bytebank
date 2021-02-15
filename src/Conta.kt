@@ -1,6 +1,8 @@
-open class Conta(var titular: String, val numeroConta: Int) {
-    //    var titular = titular
-//    var numeroConta = numeroConta
+open class Conta(
+    var titular: String,
+    val numeroConta: Int
+) {
+
     var saldo = 0.0
         private set
 
