@@ -14,7 +14,14 @@ fun testaAutenticacao() {
         plr = 150.0
     )
 
+    val cliente = Cliente(
+        nome = "Paulo",
+        cpf = "999.888.777-66",
+        senha = 1221
+    )
+
     val sistema = SistemaInterno()
-    sistema.entra(gerente, diretor.senha)
+    sistema.entra(gerente, gerente.senha)
     sistema.entra(diretor, diretor.senha)
+    sistema.entra(cliente, cliente.senha)
 }
