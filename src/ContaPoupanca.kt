@@ -6,4 +6,11 @@ class ContaPoupanca(
     numeroConta = numeroConta
 
 ){
+    override fun saca(valor: Double) {
+        if (this.saldo >= valor) {
+            this.saldo -= valor
+        } else {
+            System.out.println("Saldo insuficiente para realizar operação")
+        }
+    }
 }
