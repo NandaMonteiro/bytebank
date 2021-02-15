@@ -1,7 +1,7 @@
 class Cliente(
     val nome: String,
     val cpf: String,
-    val senha: Int
+    protected val senha: Int
 
 ): Autenticavel {
 
