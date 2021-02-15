@@ -6,9 +6,9 @@ fun testaFuncionarios() {
         senha = 123
     )
 
-    println("Nome ${gerente.nome}")
+    println("GERENTE -> Nome ${gerente.nome}")
     println("Salário ${gerente.salario}")
-    println("Bonificação ${gerente.bonificacao()}")
+    println("Bonificação ${gerente.bonificacao}")
 
     val diretor = Diretor(
         nome = "Marcos",
@@ -18,9 +18,9 @@ fun testaFuncionarios() {
         plr = 20.0
     )
 
-    println("Nome ${diretor.nome}")
+    println("DIRETOR -> Nome ${diretor.nome}")
     println("Salário ${diretor.salario}")
-    println("Bonificação ${diretor.bonificacao()}")
+    println("Bonificação ${diretor.bonificacao}")
 
     val analista = Analista(
         nome = "Beto",
@@ -28,9 +28,9 @@ fun testaFuncionarios() {
         salario = 400.00
     )
 
-    println("Nome ${analista.nome}")
+    println("ANALISTA -> Nome ${analista.nome}")
     println("Salário ${analista.salario}")
-    println("Bonificação ${analista.bonificacao()}")
+    println("Bonificação ${analista.bonificacao}")
 
     if (gerente.autentica(123)) {
         println("Autentecação confirmada")
@@ -38,10 +38,21 @@ fun testaFuncionarios() {
         println("Erro na autenticação")
     }
 
+    val auxiliar = Auxiliar(
+        nome = "Marcos",
+        cpf = "111.222.333-45",
+        salario = 500.00
+    )
+
+    println("AUXILIAR -> Nome ${auxiliar.nome}")
+    println("Salário ${auxiliar.salario}")
+    println("Bonificação ${auxiliar.bonificacao}")
+
     val calculadora = CalculadoraBonificacao()
     calculadora.registra(gerente)
     calculadora.registra(diretor)
     calculadora.registra(analista)
+    calculadora.registra(auxiliar)
 
     println("Total de bonificação: ${calculadora.total}")
 }
