@@ -1,6 +1,6 @@
 fun main() {
 
-    testaFuncionarios()
+    testaContasDiferentes()
 }
 
 

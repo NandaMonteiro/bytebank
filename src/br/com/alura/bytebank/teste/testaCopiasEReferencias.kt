@@ -9,7 +9,7 @@ fun testaCopiasEReferencias() {
 //    println("numero X $numeroX")
 //    println("numero Y $numetoY")
 
-    val marcos = Cliente("Marcos", "", 123)
+    val marcos = Cliente(nome = "Marcos", cpf = "", senha = 123)
     val conta2 = ContaCorrente(marcos, 4443)
 //    conta2.titular.nome = "Marcos"
 //    var conta3 = conta2
