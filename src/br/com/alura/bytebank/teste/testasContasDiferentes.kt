@@ -1,14 +1,16 @@
+import br.com.alura.bytebank.modelo.Cliente
 import br.com.alura.bytebank.modelo.ContaCorrente
 import br.com.alura.bytebank.modelo.ContaPoupanca
 
 fun testaContasDiferentes() {
+    val nanda = Cliente(nome = "Nanda", cpf = "", senha = 123)
     val contaCorrente = ContaCorrente(
-        titular = "Nanda",
+        titular = nanda,
         numeroConta = 1223
     )
 
     val contaPoupanca = ContaPoupanca(
-        titular = "Marcos",
+        titular = Cliente(nome = "Marcos", cpf = "", senha = 123),
         numeroConta = 1222
     )
 
