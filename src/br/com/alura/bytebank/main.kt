@@ -1,19 +1,24 @@
-import br.com.alura.bytebank.modelo.Cliente
-import br.com.alura.bytebank.modelo.Conta
-import br.com.alura.bytebank.modelo.ContaPoupanca
+package br.com.alura.bytebank
 
+import br.com.alura.bytebank.modelo.Endereco
 
 fun main() {
 
+    val endereço = Endereco()
 
-    val nanda = Cliente(nome = "Nanda", cpf = "", senha = 1)
-    val contaPoupanca = ContaPoupanca(titular = nanda, numeroConta = 1111)
-    testaContasDiferentes()
+    println()
+    println(1)
+    println(1.2)
+    println(true)
+    println(endereço)
 
-    println("Total conta: ${Conta.total}")
+    imprimi(endereço)
 }
 
-
+fun imprimi(valor: Any): Any{
+    println(valor)
+    return valor
+}
 
 
 
