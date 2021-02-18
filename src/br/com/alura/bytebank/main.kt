@@ -1,6 +1,7 @@
 package br.com.alura.bytebank
 
 import br.com.alura.bytebank.modelo.Endereco
+import testaFuncionarios
 
 fun main() {
 
@@ -13,6 +14,8 @@ fun main() {
     println(endereço)
 
     imprimi(endereço)
+
+    testaFuncionarios()
 }
 
 fun imprimi(valor: Any): Any{
