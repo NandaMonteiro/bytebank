@@ -1,6 +1,6 @@
 import br.com.alura.bytebank.modelo.Cliente
+import br.com.alura.bytebank.modelo.Conta
 import br.com.alura.bytebank.modelo.ContaPoupanca
-import br.com.alura.bytebank.modelo.totalContas
 
 
 fun main() {
@@ -10,7 +10,7 @@ fun main() {
     val contaPoupanca = ContaPoupanca(titular = nanda, numeroConta = 1111)
     testaContasDiferentes()
 
-    println("Total conta: $totalContas")
+    println("Total conta: ${Conta.total}")
 }
 
 
