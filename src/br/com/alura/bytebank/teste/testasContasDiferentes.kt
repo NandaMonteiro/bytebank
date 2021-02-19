@@ -10,7 +10,7 @@ fun testaContasDiferentes() {
         senha = 123,
         endereco = Endereco(
             logradouro = "Rua teste",
-            numro = 1,
+            numero = 1,
             bairro = "bairro",
             cidade = "cajazeiras",
             estado = "PB",

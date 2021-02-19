@@ -1,21 +1,18 @@
 package br.com.alura.bytebank
 
 import br.com.alura.bytebank.modelo.Endereco
-import testaFuncionarios
 
 fun main() {
 
-    val endereço = Endereco()
+    val endereco = Endereco(logradouro = "Dr. Epitacio Leite Rolim", complemento = "Saida para Sousa")
+    val enderecoNovo = Endereco()
 
-    println()
-    println(1)
-    println(1.2)
-    println(true)
-    println(endereço)
+    println(endereco.equals(endereco))
 
-    imprimi(endereço)
-
-    testaFuncionarios()
+    println(endereco.hashCode())
+    println(enderecoNovo.hashCode())
+    println(endereco.toString())
+    println(enderecoNovo.toString())
 }
 
 fun imprimi(valor: Any): Any{
