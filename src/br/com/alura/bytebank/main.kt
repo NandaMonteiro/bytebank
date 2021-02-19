@@ -4,10 +4,22 @@ import br.com.alura.bytebank.modelo.Endereco
 
 fun main() {
 
-    val endereco = Endereco(logradouro = "Dr. Epitacio Leite Rolim", complemento = "Saida para Sousa")
-    val enderecoNovo = Endereco()
+    val endereco = Endereco(
+        logradouro = "Dr. Epitacio Leite Rolim",
+        complemento = "Saida para Sousa",
+        cep = "589000009",
+        estado = "Paraiba",
+        cidade = "Cajazeiras"
+    )
+    val enderecoNovo = Endereco(
+        logradouro = "Júlio Pajéu",
+        complemento = "",
+        cep = "589000009",
+        estado = "Paraiba",
+        cidade = "Cajazeiras"
+    )
 
-    println(endereco.equals(endereco))
+    println(endereco.equals(enderecoNovo))
 
     println(endereco.hashCode())
     println(enderecoNovo.hashCode())
