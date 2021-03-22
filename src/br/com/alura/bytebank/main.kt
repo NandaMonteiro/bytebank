@@ -5,6 +5,11 @@ import br.com.alura.bytebank.teste.testaAny
 
 fun main() {
     println("inicio main")
+    try {
+        10/0
+    } catch (e :ArithmeticException){
+        println("ArithmeticException")
+    }
     funcao1()
     println("fim main")
 }
