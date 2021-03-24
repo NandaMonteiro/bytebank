@@ -37,11 +37,11 @@ fun testaContasDiferentes() {
     println("br.com.alura.bytebank.modelo.Conta corrente saldo -> ${contaCorrente.saldo}")
     println("br.com.alura.bytebank.modelo.Conta poupanca saldo -> ${contaPoupanca.saldo}")
 
-    contaCorrente.transfere(100.0, contaPoupanca)
+    contaCorrente.transfere(100.0, contaPoupanca, 123)
     println("br.com.alura.bytebank.modelo.Conta corrente saldo -> ${contaCorrente.saldo}")
     println("br.com.alura.bytebank.modelo.Conta poupanca saldo -> ${contaPoupanca.saldo}")
 
-    contaPoupanca.transfere(100.0, contaCorrente)
+    contaPoupanca.transfere(100.0, contaCorrente, 123)
     println("br.com.alura.bytebank.modelo.Conta corrente saldo -> ${contaCorrente.saldo}")
     println("br.com.alura.bytebank.modelo.Conta poupanca saldo -> ${contaPoupanca.saldo}")
 }
